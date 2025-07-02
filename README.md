@@ -15,27 +15,27 @@ import pandas as pd
 import qrcode
 import os
 
-# 读取Excel文件
+# 讀取Excel文件
 file_path = 'your_file.xlsx'  # 替换为你的Excel文件路径
 df = pd.read_excel(file_path)
 
-# 遍历每一行
+# 遍歷每一行
 for index, row in df.iterrows():
     qr_data = row['QR']  # 获取QR列的数据
     e_class_key = row['E-class Key']  # 获取E-class Key列的数据
 
-    # 创建以E-class Key命名的目录
+    # 建立以E-class Key命名的目錄
     e_class_dir = os.path.join('output_images', str(e_class_key))
     os.makedirs(e_class_dir, exist_ok=True)
 
-    # 生成二维码
+    # 產生二維碼
     qr = qrcode.make(qr_data)
     
-    # 定义文件名
+    # 定義檔名
     file_name = f"{e_class_key}.png"
     file_path = os.path.join(e_class_dir, file_name)
 
-    # 保存二维码图像
+    # 儲存二維碼圖像
     qr.save(file_path)
 
-print(f"生成的二维码图像保存在 'output_images' 目录下的各自文件夹中。")
+print(f"產生的二維碼影像保存在 'output_images' 目錄下的各自資料夾中。")
