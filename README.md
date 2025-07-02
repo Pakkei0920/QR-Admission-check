@@ -16,13 +16,13 @@ import qrcode
 import os
 
 # 讀取Excel文件
-file_path = 'your_file.xlsx'  # 替换为你的Excel文件路径
+file_path = 'your_file.xlsx'  # 替換為你的Excel檔案路徑
 df = pd.read_excel(file_path)
 
 # 遍歷每一行
 for index, row in df.iterrows():
-    qr_data = row['QR']  # 获取QR列的数据
-    e_class_key = row['E-class Key']  # 获取E-class Key列的数据
+    qr_data = row['QR']  # 取得QR列的數據
+    e_class_key = row['E-class Key']  # 取得E-class Key列的數據
 
     # 建立以E-class Key命名的目錄
     e_class_dir = os.path.join('output_images', str(e_class_key))
