@@ -9,7 +9,13 @@ local /ip.index.php (test)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-# 按欄位qr對應的欄位E-class Key的名稱重新命名 再按E-class Key的名稱獨立各自建立file
+# 產生QR
+按欄位qr對應的欄位E-class Key的名稱重新命名 再按E-class Key的名稱獨立各自建立file
+利用以上excel 欄位，用python讀取以上欄位，按照欄位QR生成png，然後再按欄位qr對應的欄位E-class Key重新命名再各自建立file
+[E-class Key Key Class Number Ename Cname *QR]
+QR = excel random 英文 大小寫5位 -> =CHAR(RANDBETWEEN(65,90)) & CHAR(RANDBETWEEN(97,122)) & CHAR(RANDBETWEEN(65,90)) & CHAR(RANDBETWEEN(97,122)) & CHAR(RANDBETWEEN(65,90))
+---
+
 
 import pandas as pd
 import qrcode
