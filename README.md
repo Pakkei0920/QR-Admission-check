@@ -11,7 +11,7 @@ local /ip.index.php (test)
 
 *
 
-* 按欄位qr對應的欄位E-class Key的名稱重新命名 再按E-class Key的名稱獨立各自建立file *
+# 按欄位qr對應的欄位E-class Key的名稱重新命名 再按E-class Key的名稱獨立各自建立file
 
 import pandas as pd
 import qrcode
